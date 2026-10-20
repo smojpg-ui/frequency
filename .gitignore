@@ -20,6 +20,10 @@
 !assets/art/
 !assets/art/**
 
+# her untouched originals stay on this Mac. the public repo carries editions/ (her approved copies).
+# SHA256SUMS still verifies them locally: shasum -a 256 -c SHA256SUMS
+/originals/
+
 # machine + editor noise
 .DS_Store
 *.swp

@@ -2,7 +2,7 @@
 
 A small static site for GLITCH, the manga / light-novel universe by S. Moore. It starts with **the pocket bible**, framed exactly as she made it, plus a landing page with shelf room for whatever comes next.
 
-**Status: prototype, not published.** Every page has `noindex` and a visible "prototype · local only" stamp. The code lives in a **private** GitHub repo, [smojpg-ui/frequency](https://github.com/smojpg-ui/frequency), which only you (and anyone you invite) can see. No website has been deployed.
+**Status: prototype.** The code is public on GitHub at [smojpg-ui/frequency](https://github.com/smojpg-ui/frequency). No website has been deployed yet (see *Publish the website* below). Every page still has `noindex` and a visible "prototype · local only" stamp.
 
 There's no build step, no dependencies, and nothing to install. It's plain HTML, CSS, and a few small JavaScript files.
 
@@ -29,8 +29,8 @@ In the Claude desktop app, `.claude/launch.json` holds the same command under th
 |---|---|
 | `index.html` | the landing page: cover, then **The Files** shelf |
 | `pocket-bible/index.html` | the reader: a slim bar on top, with the pocket bible filling the rest of the screen |
-| `originals/` | **her files, byte-for-byte. Never edit anything in here.** |
-| `editions/` | copies of originals with changes she approved. The reader shows these. Today that's the pocket bible with the byline nod (5 lines). |
+| `originals/` | **her files, byte-for-byte, kept on this Mac only.** The folder is gitignored, so it never goes public. Never edit anything in here. |
+| `editions/` | the public copies of her originals, with any changes she approved. The reader shows these. Today that's the pocket bible with the byline nod (5 lines). |
 | `SHA256SUMS` | fingerprints of everything in `originals/`, so you can prove they're untouched |
 | `content/shelf.json` | the list of files on the shelf: titles, notes, and open or placeholder |
 | `assets/css/site.css` | all styles. Colors are the tokens at the top. |
@@ -60,10 +60,11 @@ In the Claude desktop app, `.claude/launch.json` holds the same command under th
 
 **Add a new original (say, a chapter you've finished):**
 
-1. Copy it into `originals/` untouched, e.g. `cp ~/somewhere/ch-001.html originals/`.
+1. Copy it into `originals/` untouched, e.g. `cp ~/somewhere/ch-001.html originals/`. That copy stays on your Mac.
 2. Refresh the fingerprints: `shasum -a 256 originals/*.html > SHA256SUMS`
-3. Make its reader: copy the `pocket-bible/` folder to `ch-001/`, then in `ch-001/index.html` change the `<title>`, the bar title, and the two `../originals/...` paths.
-4. In `content/shelf.json`, set that entry to `"status": "open"` and `"href": "ch-001/"`.
+3. Copy it into `editions/` too. That's the public copy, and the only place approved changes ever happen.
+4. Make its reader: copy the `pocket-bible/` folder to `ch-001/`, then in `ch-001/index.html` change the `<title>`, the bar title, and the two `../editions/...` paths.
+5. In `content/shelf.json`, set that entry to `"status": "open"` and `"href": "ch-001/"`.
 
 **Check the originals are still untouched:**
 
@@ -88,15 +89,14 @@ Text needs 4.5:1 or more. The table in `ARCHITECTURE.md` lists every current pai
 
 ---
 
-## Publish later (not done, not yet asked for)
+## Publish the website (not done yet)
 
-The repo is already on GitHub (private, `origin`). Turning it into a website is a separate step. When, and only when, you decide it should be on the web:
+The repo is public on GitHub (`origin`). Turning it into a website is a separate switch. When, and only when, you want the site live:
 
-1. **Decide what's public.** On a free GitHub account, Pages needs a **public** repo, so everything in it (including `originals/`) is readable by anyone. Private-repo Pages needs a paid plan (Pro, Team, or Enterprise).
-   - Everything the site shows says *S. Moore* and *Aether Systems Research*, including the pocket bible, which now comes from `editions/`. Two places still carry your full name. **`originals/glitch-pocket-bible.html`**, the untouched source, is in the repo, so a public repo publishes it. If you want it kept off the web, move it out of the repo or gitignore it before the first push. **The git history** has your first name in a few early commit messages. The repo is private today, so the history can still be rewritten before it ever goes public, if you want.
+1. **What's public already:** everything in the repo. Your full name isn't in it. `originals/` stays on your Mac, and the history was cleaned before the repo went public.
 2. **Lift the prototype bits** when you're ready: delete the `<meta name="robots" content="noindex, nofollow">` line in `index.html` and `pocket-bible/index.html`, and the `stamp` spans + the footer's "prototype · local only" line.
    - ⚠ The pocket bible's own file has **no** `noindex` line. If it's published, its direct URL (`/editions/glitch-pocket-bible.html`) can be indexed on its own, even while the frame page says noindex. That's fine once you're ready to be found. If you're not, don't publish yet.
-3. **Make the repo public** (or upgrade the plan), then switch Pages on. Save your work with `git push`, and then on GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `/ (root)`**.
+3. **Switch Pages on.** Save your work with `git push`, and then on GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `/ (root)`**.
 4. It lands at `https://smojpg-ui.github.io/frequency/`. Every path in the site is relative, so it works there unchanged.
 
 ---
