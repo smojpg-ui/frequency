@@ -1,0 +1,27 @@
+# loose art stays out of git until the artist says yes.
+# after a yes:  git add -f path/to/the-piece.png   (or add a "!path" line below)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.avif
+*.heic
+*.tif
+*.tiff
+*.psd
+*.procreate
+*.clip
+*.kra
+*.mp4
+*.mov
+art/
+
+# machine + editor noise
+.DS_Store
+*.swp
+.vscode/
+
+# claude's local settings stay local; the preview config is shared on purpose
+.claude/*
+!.claude/launch.json
