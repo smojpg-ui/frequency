@@ -34,10 +34,11 @@ Every creative call I made for you while building this. None of it is canon, and
 | 15 | **Fonts are saved in the repo** (`assets/fonts/`, with their open-font licenses), so the site makes no outside requests and works offline. *You: "oh shit that's cool. we can save copies in the repo? CLAUDE YEAH VENTURE FORTH, DEAR ONE \*points\*"* Done. The one exception is your original inside the frame, which still loads its own fonts from Google. That's in your file, and I don't edit it. | ☑ |
 | 16 | **The local preview runs on port 4747**, a small nod to Subject 47. *You: "THE NOD. \*agrees\*"* | ☑ |
 | 17 | **New, from "get wild" (8): light mode re-stamps the band.** Dark reads `Top Secret // Index`. Light, the printout, reads `Declassified // Printout`, because the paper copy is the declassified one. *You: "all approved"* | ☑ |
+| 18 | **An edited copy of the pocket bible carries the nod**: `editions/glitch-pocket-bible.html`, with 5 lines changed (author tag, two descriptions, footer byline, footer "Aether Research Systems"). The reader shows this copy. `originals/` keeps your untouched file. *You: "edit it, please!!!! then let me save the cutie"* | ☑ |
 
 ## Notes on your original (I changed nothing; these are offers)
 
-Things I noticed while reading it closely. Take them or leave them. Fixing any of them means editing your file (or a copy you approve), so they're yours to decide.
+Things I noticed while reading it closely. Take them or leave them. Any you say yes to go into the copy in `editions/`. The original never changes.
 
 - **Some small colored labels are under AA contrast on the dark background.** The section numbers and sub-heads in red (09 STILLWATER, 10 The Fronts: *Music*, *Attention*…) are 3.69:1. Rose (02 How Casting Works, Marin's chips) is 4.49 and 4.21. Green on the panels (06 codex labels) is 4.43. AA is 4.5. A slightly lighter tint of each would pass without changing the feel. These are the smallest lightenings that clear 4.5:1 on both your background and your panels, ready if you say yes:
   - red `#c0392b` → `#d55042`

@@ -28,8 +28,9 @@ In the Claude desktop app, `.claude/launch.json` holds the same command under th
 | path | what it is |
 |---|---|
 | `index.html` | the landing page: cover, then **The Files** shelf |
-| `pocket-bible/index.html` | the reader: a slim bar on top, with her original filling the rest of the screen |
+| `pocket-bible/index.html` | the reader: a slim bar on top, with the pocket bible filling the rest of the screen |
 | `originals/` | **her files, byte-for-byte. Never edit anything in here.** |
+| `editions/` | copies of originals with changes she approved. The reader shows these. Today that's the pocket bible with the byline nod (5 lines). |
 | `SHA256SUMS` | fingerprints of everything in `originals/`, so you can prove they're untouched |
 | `content/shelf.json` | the list of files on the shelf: titles, notes, and open or placeholder |
 | `assets/css/site.css` | all styles. Colors are the tokens at the top. |
@@ -92,9 +93,9 @@ Text needs 4.5:1 or more. The table in `ARCHITECTURE.md` lists every current pai
 When, and only when, you decide it should be on the web:
 
 1. **Decide what's public.** On a free GitHub account, Pages needs a **public** repo, so everything in it (including `originals/`) is readable by anyone. Private-repo Pages needs a paid plan (Pro, Team, or Enterprise).
-   - The site's pages say *S. Moore* and *Aether Research Systems*, the nod you chose. Two places still carry your full name. **The pocket bible itself** says "S. Moore" and "Aether Systems LLC" in its author tag, description, and footer (it's your file, untouched). **The git history** has your first name in a few early commit messages. Since nothing has been pushed, the history can be rewritten cleanly before the first push if you want.
+   - Everything the site shows says *S. Moore* and *Aether Research Systems*, including the pocket bible, which now comes from `editions/`. Two places still carry your full name. **`originals/glitch-pocket-bible.html`**, the untouched source, is in the repo, so a public repo publishes it. If you want it kept off the web, move it out of the repo or gitignore it before the first push. **The git history** has your first name in a few early commit messages. Since nothing has been pushed, the history can be rewritten cleanly before the first push if you want.
 2. **Lift the prototype bits** when you're ready: delete the `<meta name="robots" content="noindex, nofollow">` line in `index.html` and `pocket-bible/index.html`, and the `stamp` spans + the footer's "prototype · local only" line.
-   - ⚠ The pocket bible's own file has **no** `noindex` line. If it's published, its direct URL (`/originals/glitch-pocket-bible.html`) can be indexed on its own, even while the frame page says noindex. That's fine once you're ready to be found. If you're not, don't publish yet.
+   - ⚠ The pocket bible's own file has **no** `noindex` line. If it's published, its direct URL (`/editions/glitch-pocket-bible.html`) can be indexed on its own, even while the frame page says noindex. That's fine once you're ready to be found. If you're not, don't publish yet.
 3. **Push and switch Pages on:**
    ```bash
    git remote add origin https://github.com/<your-account>/frequency.git

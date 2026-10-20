@@ -5,9 +5,11 @@ Short version: static files, served as they are. No build, no framework, no pack
 ```
 frequency/
 ├── index.html                 landing: cover + The Files
-├── pocket-bible/index.html    reader: bar + <iframe> of the original
+├── pocket-bible/index.html    reader: bar + <iframe> of the edition
 ├── originals/                 her files, byte-for-byte (checked by SHA256SUMS)
 │   └── glitch-pocket-bible.html
+├── editions/                  copies with changes she approved; the reader frames these
+│   └── glitch-pocket-bible.html   (byline nod: S. Moore, Aether Research Systems)
 ├── content/shelf.json         what's on the shelf (data, no code)
 ├── assets/
 │   ├── css/site.css           tokens → base → bar → landing → reader
@@ -25,7 +27,7 @@ frequency/
 
 ## Four rules the structure enforces
 
-1. **Originals are framed, never edited.** `originals/` holds her files exactly as she saved them. A reader page puts a thin bar above the file and shows it in an `<iframe>`. If a frame ever needs to change something, it changes the frame. `shasum -a 256 -c SHA256SUMS` proves the originals are untouched.
+1. **Originals are framed, never edited.** `originals/` holds her files exactly as she saved them. When she approves a change, it goes into a copy in `editions/` and the reader frames that copy. The original stays as the source (`diff originals/X editions/X` shows exactly what changed). A reader page puts a thin bar above the file and shows it in an `<iframe>`. If a frame ever needs to change something, it changes the frame. `shasum -a 256 -c SHA256SUMS` proves the originals are untouched.
 2. **Content lives apart from code.** The growing part of the site, the shelf, is `content/shelf.json`. `shelf.js` only reads it. The cover text stays in `index.html` so the page's face still renders with JavaScript off. The pocket bible card is also there as a static fallback, which `shelf.js` swaps out for the full shelf.
 3. **Every path is relative.** That includes `assets/…` and `../originals/…`. Nothing starts with `/`, so the site works from `127.0.0.1:4747/`, from a GitHub Pages project URL (`…github.io/frequency/`), or from any folder.
 4. **Settings are applied before first paint.** `boot.js` is a classic (blocking) script, loaded in `<head>` before the stylesheet. It sets `data-theme` and `data-motion` on `<html>`, so the page never flashes the wrong theme or plays a frame of animation it shouldn't. ES modules are deferred, which is why this one piece isn't a module.
