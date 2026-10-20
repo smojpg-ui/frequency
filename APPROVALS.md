@@ -53,6 +53,6 @@ Things I noticed while reading it closely. Take them or leave them. Any you say 
 
 ## Things I didn't do
 
-- Nothing was pushed, and there's no remote and no deploy.
+- No deploy. The repo was pushed to GitHub as **private** once you asked for the link (*"SEND THE GIT LINK, BABE"*, then "Private repo"): https://github.com/smojpg-ui/frequency
 - No loose art was committed. Images are gitignored until you say yes to a piece.
 - Nothing from any other world you're building was used. The palette, type, and voice all come from the pocket bible and GLITCH.
