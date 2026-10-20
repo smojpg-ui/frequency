@@ -4,31 +4,34 @@ Every creative call I made for you while building this. None of it is canon, and
 
 *(Status key: ☐ waiting on you · ☑ yes · ☒ no)*
 
+> **Answered in chat, 2026-10-20.** Your words are quoted in each row exactly as you sent them. In the chat, the list was renumbered 2–15 (markdown counts in order), so I matched your answers by what each line said, not by number. Your 14 (fonts) and 15 (the port) confirm the match.
+
 ## Structure
 
 | # | call | status |
 |---|---|---|
 | 1 | **The repo's folder name:** `frequency`. You picked it ("FREQUENCY IS FUN-ER"). If this ever goes to GitHub Pages, it becomes the URL: `…github.io/frequency/`. | ☑ |
-| 2 | **Your file is stored as `originals/glitch-pocket-bible.html`.** I dropped the `_1` from the filename because it was macOS's duplicate-download suffix (both copies in Downloads are byte-identical, sha256 `908da313…bfef997`). The contents are unchanged. | ☐ |
-| 3 | **The pocket bible is shown in a frame** (a slim bar on top, your file filling the rest of the screen), not rebuilt as a site page. "original ↗" opens it alone in its own tab. | ☐ |
+| 2 | **Your file is stored as `originals/glitch-pocket-bible.html`.** I dropped the `_1` from the filename because it was macOS's duplicate-download suffix (both copies in Downloads are byte-identical, sha256 `908da313…bfef997`). The contents are unchanged. *You: "ya"* | ☑ |
+| 3 | **The pocket bible is shown in a frame** (a slim bar on top, your file filling the rest of the screen), not rebuilt as a site page. "original ↗" opens it alone in its own tab. *You: "girl idk"*. Still open. Why I'd keep it: a frame is the only way to show your file without editing a single byte of it. | ☐ |
 | 4 | **"The Files" shelf:** one open file (the pocket bible) and one **placeholder**, *the gallery*. The world bible v0.7 and annexes v0.3 slots came out after you said *"the pocket bible is the most up to date. it mixes annex and world bible...i THINK."* (Its own cover confirms it: "Drawn from: World Bible v0.7 + Annexes v0.3.") | ☑ |
-| 5 | **Doc refs:** `ART-00` for the gallery and `IDX-00` for the landing page. `WB-POCKET-01` is yours, and the rest are mine, made in its style. They're site labels, not canon. | ☐ |
+| 5 | **Doc refs:** `ART-00` for the gallery and `IDX-00` for the landing page. `WB-POCKET-01` is yours, and the rest are mine, made in its style. They're site labels, not canon. *You: "ya"* | ☑ |
 
 ## Look and voice
 
 | # | call | status |
 |---|---|---|
-| 6 | **Dark is the default.** Your pocket bible says it's "dark on every host," so the site opens dark for everyone, whatever their system setting is. | ☐ |
-| 7 | **Light mode is "the printout":** your hues darkened onto warm paper (`#f3f0e8`) until every text color passes AA. It only changes my pages. Your dossier stays dark inside its frame. | ☐ |
-| 8 | **The landing page speaks in the pocket bible's dossier voice:** a red band reading `Top Secret // Index`, a doc ref, `Holds: WB-POCKET-01`, and `Distribution: friends of the author` (your phrase, reused). | ☐ |
+| 6 | **Dark is the default.** Your pocket bible says it's "dark on every host," so the site opens dark for everyone, whatever their system setting is. *You: "YA"* | ☑ |
+| 7 | **Light mode is "the printout":** your hues darkened onto warm paper (`#f3f0e8`) until every text color passes AA. It only changes my pages. Your dossier stays dark inside its frame. *You: "MMHMM"* | ☑ |
+| 8 | **The landing page speaks in the pocket bible's dossier voice:** a red band reading `Top Secret // Index`, a doc ref, `Holds: WB-POCKET-01`, and `Distribution: friends of the author` (your phrase, reused). *You: "GET WILD WITH IT, HAVE FUN"*. First wild move: see 17. | ☑ |
 | 9 | **The landing copy is all your own lines**, trimmed: the byline *"a manga / light-novel universe by S. Moore"*, *"It is the present day. A war is being fought inside all of it."*, *"All writing is spellcasting."*, and *"GLITCH is the crack. ASCEND is the hum."* in the footer. I wrote no new world text. | ☐ |
 | 10 | **My own microcopy** (UI, not world): "The Files", "Open files link through. A placeholder is an empty slot, held until there's something real to put in it.", "open the pocket bible →", "skip to the files", the switch labels "light" and "motion". | ☐ |
-| 11 | **The wordmark glitches:** every ~7 seconds, a cyan copy and a rose copy of GLITCH split off for a beat and snap back. It's off when motion is off, when your OS asks for reduced motion, and when JavaScript is off. | ☐ |
-| 12 | **The favicon is your quill**, lifted from the pocket bible's own icon into `assets/icon.svg`. | ☐ |
+| 11 | **The wordmark glitches:** every ~7 seconds, a cyan copy and a rose copy of GLITCH split off for a beat and snap back. It's off when motion is off, when your OS asks for reduced motion, and when JavaScript is off. *You: "YEAH"* | ☑ |
+| 12 | **The favicon is your quill**, lifted from the pocket bible's own icon into `assets/icon.svg`. *You: "YEAH"* | ☑ |
 | 13 | **The "prototype · local only" stamp is amber**, outlined, in the top bar, and the footer adds "not for distribution". Both stay until you say otherwise. | ☐ |
-| 14 | **Your real name and Aether Systems LLC** appear in the byline and footer, exactly as in your file. Keep them for a public version, or use a pen name? | ☐ |
-| 15 | **Fonts come from Google Fonts**, like your file does. The other option is to save copies into the repo so it works fully offline and makes no outside request. | ☐ |
-| 16 | **The local preview runs on port 4747**, a small nod to Subject 47. | ☐ |
+| 14 | **Your real name and Aether Systems LLC** appear in the byline and footer, exactly as in your file. Keep them for a public version, or use a pen name? *You: "WOAH MUAHAHAH OH SHIT NO WAY HAHAHA"*. I couldn't tell which way that went, so I asked again in chat. Nothing is public, so nothing changes until you say. | ☐ |
+| 15 | **Fonts are saved in the repo** (`assets/fonts/`, with their open-font licenses), so the site makes no outside requests and works offline. *You: "oh shit that's cool. we can save copies in the repo? CLAUDE YEAH VENTURE FORTH, DEAR ONE \*points\*"* Done. The one exception is your original inside the frame, which still loads its own fonts from Google. That's in your file, and I don't edit it. | ☑ |
+| 16 | **The local preview runs on port 4747**, a small nod to Subject 47. *You: "THE NOD. \*agrees\*"* | ☑ |
+| 17 | **New, from "get wild" (8): light mode re-stamps the band.** Dark reads `Top Secret // Index`. Light, the printout, reads `Declassified // Printout`, because the paper copy is the declassified one. | ☐ |
 
 ## Notes on your original (I changed nothing; these are offers)
 

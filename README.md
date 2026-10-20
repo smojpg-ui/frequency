@@ -34,6 +34,7 @@ In the Claude desktop app, `.claude/launch.json` holds the same command under th
 | `content/shelf.json` | the list of files on the shelf: titles, notes, and open or placeholder |
 | `assets/css/site.css` | all styles. Colors are the tokens at the top. |
 | `assets/js/` | `boot.js` (theme + motion, before first paint), `settings.js` (the switches), `shelf.js` (draws the shelf) |
+| `assets/fonts/` | the three typefaces, saved locally, with their licenses |
 | `assets/icon.svg` | the quill favicon, taken from the pocket bible's own icon |
 | `tools/contrast.py` | checks two colors against WCAG contrast |
 | `.nojekyll` | tells GitHub Pages to serve the files as-is |
@@ -108,5 +109,5 @@ When, and only when, you decide it should be on the web:
 ## What this site does *not* do
 
 - No analytics, cookies, or trackers. The only setting it saves is your light/motion choice, in your own browser's `localStorage`.
-- One outside request: fonts from Google Fonts (Share Tech Mono, IM Fell English, Barlow), the same ones the pocket bible loads. Offline, it falls back to system fonts.
+- No outside requests. The fonts (Share Tech Mono, IM Fell English, Barlow) are saved in `assets/fonts/` with their open-font licenses. The one exception is the pocket bible itself, inside the frame: it loads its own fonts from Google Fonts, and it stays exactly as made.
 - It never edits anything in `originals/`.

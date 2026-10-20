@@ -11,6 +11,7 @@ frequency/
 ├── content/shelf.json         what's on the shelf (data, no code)
 ├── assets/
 │   ├── css/site.css           tokens → base → bar → landing → reader
+│   ├── fonts/                 Barlow, IM Fell English, Share Tech Mono + their OFL licenses
 │   ├── js/boot.js             classic script in <head>: theme + motion before first paint
 │   ├── js/settings.js         module: the light / motion switches
 │   ├── js/shelf.js            module: renders shelf.json into The Files
@@ -72,4 +73,4 @@ Checked at 375 px: no sideways scroll on the landing page or the reader. Side gu
 
 ## Not here, on purpose
 
-No bundler, no npm, no framework, no analytics, no cookies. The one outside request is Google Fonts, the same three families the pocket bible loads (it also loads La Belle Aurore for its quill, which this site doesn't need). Self-hosting the fonts would make the site fully offline. That's an easy later step if she wants it.
+No bundler, no npm, no framework, no analytics, no cookies, and no outside requests. The three typefaces from the pocket bible (Barlow, IM Fell English, Share Tech Mono) are saved in `assets/fonts/` with their SIL Open Font License files. Barlow and IM Fell English are Google's latin subsets. Share Tech Mono is the full, unmodified file, because its license reserves the name "Share" for unmodified versions. The only thing that still reaches out is her original inside the frame, which loads its own fonts from Google Fonts. That's in her file, so it stays.
