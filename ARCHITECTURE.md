@@ -9,7 +9,7 @@ frequency/
 ├── originals/                 her files, byte-for-byte (checked by SHA256SUMS)
 │   └── glitch-pocket-bible.html
 ├── editions/                  copies with changes she approved; the reader frames these
-│   └── glitch-pocket-bible.html   (byline nod: S. Moore, Aether Research Systems)
+│   └── glitch-pocket-bible.html   (byline nod: S. Moore, Aether Systems Research)
 ├── content/shelf.json         what's on the shelf (data, no code)
 ├── assets/
 │   ├── css/site.css           tokens → base → bar → landing → reader
