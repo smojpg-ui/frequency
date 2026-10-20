@@ -1,0 +1,125 @@
+/* GLITCH: site styles.
+   Palette and type come from the pocket bible (originals/glitch-pocket-bible.html), not invented.
+   Dark is her palette exactly. Light ("the printout") is the same hues darkened until every text
+   color passes WCAG AA on paper. Contrast table: ARCHITECTURE.md. */
+
+:root {
+  --bg:#060809; --deep:#0a0d0f; --panel:#0e1215; --border:#1c2830; --border-bright:#2a3d4a;
+  --text:#b8ccd4; --bright:#ddeef5; --dim:#6a8494;
+  --gold:#c9a84c; --red:#c0392b; --amber:#d4821a; --cyan:#1a9e9e; --violet:#8f74bd; --rose:#c0517a; --rosegold:#d9a08a; --green:#2e8b57;
+  --warn-text:#e3a39b; --warn-bg:rgba(192,57,43,.09);
+  --mono:'Share Tech Mono',ui-monospace,Menlo,monospace;
+  --serif:'IM Fell English',Georgia,serif;
+  --sans:'Barlow',system-ui,sans-serif;
+  color-scheme:dark;
+}
+:root[data-theme="light"] {
+  --bg:#f3f0e8; --deep:#ebe7dc; --panel:#fbf9f4; --border:#ddd7ca; --border-bright:#b9b2a2;
+  --text:#2b3a42; --bright:#0e1215; --dim:#56656e;
+  --gold:#735a12; --red:#a8321f; --amber:#8a4f08; --cyan:#0d6666; --violet:#634a99; --rose:#963658; --rosegold:#87513d; --green:#21693f;
+  --warn-text:#a8321f; --warn-bg:rgba(168,50,31,.06);
+  color-scheme:light;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+:root[data-motion="on"]{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16.5px;line-height:1.75}
+a{color:inherit}
+em{color:var(--bright)}
+strong{color:var(--bright);font-weight:600}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+[hidden]{display:none !important}
+
+.skip{position:absolute;left:-9999px;top:8px;z-index:20;background:var(--panel);color:var(--bright);border:1px solid var(--gold);padding:8px 12px;font-family:var(--mono);font-size:12px;letter-spacing:1px}
+.skip:focus{left:16px}
+
+/* ---- the bar (top of every page) ---- */
+.bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;padding:10px 20px;background:var(--bg);border-bottom:1px solid var(--border);font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--dim)}
+.bar-home{color:var(--bright);text-decoration:none;letter-spacing:4px;padding:4px 0}
+.bar-home:hover{color:var(--gold)}
+.bar-title{color:var(--text);letter-spacing:2px}
+.bar-title .ref{color:var(--dim);margin-left:6px}
+.bar-title .sep{color:var(--dim);margin-right:6px}
+.stamp{color:var(--amber);border:1px solid currentColor;padding:3px 8px;white-space:nowrap}
+.bar-end{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.switch,.bar-link{font:inherit;letter-spacing:inherit;text-transform:inherit;color:var(--text);background:transparent;border:1px solid var(--border-bright);padding:5px 10px;min-height:32px;display:inline-flex;align-items:center;gap:6px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.switch .state{color:var(--dim)}
+.switch[aria-pressed="true"]{border-color:var(--gold)}
+.switch[aria-pressed="true"] .state{color:var(--gold)}
+.switch:hover,.bar-link:hover{color:var(--gold);border-color:var(--gold)}
+
+/* ---- landing ---- */
+.wrap{max-width:780px;margin:0 auto;padding:0 20px 96px;display:flex;flex-direction:column;gap:64px}
+
+.cover{padding-top:48px;border-bottom:2px solid var(--border-bright);padding-bottom:36px}
+.cover-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start;margin-bottom:34px}
+.band{background:var(--red);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:5px;padding:6px 16px;text-transform:uppercase}
+.meta{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--dim);text-transform:uppercase;line-height:2}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(56px,15vw,112px);letter-spacing:.08em;color:var(--bright);line-height:.95}
+.byline{font-family:var(--serif);font-style:italic;font-size:clamp(20px,4vw,28px);color:var(--gold);margin-top:12px;line-height:1.3}
+.lede{margin-top:26px;font-size:18px;max-width:62ch}
+.warn{margin-top:22px;border:1px solid var(--red);background:var(--warn-bg);color:var(--warn-text);font-family:var(--mono);font-size:11.5px;letter-spacing:1.2px;padding:14px 16px;line-height:1.9}
+.door{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:12px 18px;text-decoration:none}
+.door:hover{background:var(--gold);color:var(--bg)}
+
+/* the wordmark glitch: two offset copies that flicker for a beat every ~7s. off when motion is off. */
+.glitch{position:relative;display:inline-block}
+.glitch .ghost{position:absolute;inset:0;opacity:0;pointer-events:none;user-select:none}
+:root[data-motion="on"] .glitch .ghost.a{color:var(--cyan);animation:glitch-a 7s steps(1,end) infinite}
+:root[data-motion="on"] .glitch .ghost.b{color:var(--rose);animation:glitch-b 7s steps(1,end) infinite}
+@keyframes glitch-a{
+  0%,90%,100%{opacity:0;transform:none;clip-path:inset(0 0 0 0)}
+  91%{opacity:.85;transform:translate(-3px,1px);clip-path:inset(12% 0 58% 0)}
+  93%{opacity:.85;transform:translate(2px,0);clip-path:inset(62% 0 10% 0)}
+  95%{opacity:0}
+}
+@keyframes glitch-b{
+  0%,91%,100%{opacity:0;transform:none;clip-path:inset(0 0 0 0)}
+  92%{opacity:.75;transform:translate(3px,-1px);clip-path:inset(40% 0 30% 0)}
+  94%{opacity:.75;transform:translate(-2px,1px);clip-path:inset(5% 0 75% 0)}
+  96%{opacity:0}
+}
+
+/* sections (same bones as the pocket bible's) */
+section{display:flex;flex-direction:column;gap:18px;scroll-margin-top:72px}
+.head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--c,var(--gold));padding-bottom:10px}
+.num{font-family:var(--mono);font-size:11px;letter-spacing:4px;color:var(--c,var(--gold))}
+.head h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,5vw,34px);color:var(--bright);line-height:1.15}
+
+/* the shelf of files */
+/* borders live on the cells (not a gap over a colored background), so a short last row leaves clean page, not a slab */
+.files{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));border-top:1px solid var(--border-bright);border-left:1px solid var(--border-bright)}
+.file{background:var(--panel);display:flex;border-right:1px solid var(--border-bright);border-bottom:1px solid var(--border-bright)}
+.file-inner{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px;width:100%;color:inherit;text-decoration:none}
+.file-top{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--c,var(--gold))}
+.file-title{font-family:var(--serif);font-size:22px;line-height:1.2;color:var(--bright)}
+.file-note{font-size:14px;line-height:1.55}
+.chip{align-self:flex-start;margin-top:auto;font-family:var(--mono);font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;border:1px solid var(--c,var(--gold));color:var(--c,var(--gold));padding:3px 8px}
+.file.is-open .file-inner:hover{background:var(--deep)}
+.file.is-open .file-inner:hover .file-title{color:var(--c,var(--gold))}
+.file.is-placeholder .file-title{color:var(--text)}
+.file.is-placeholder .file-top,.file.is-placeholder .chip{color:var(--dim)}
+.file.is-placeholder .chip{border-style:dashed;border-color:var(--dim)}
+.shelf-note{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--dim)}
+
+footer{max-width:740px;width:calc(100% - 40px);margin:0 auto;padding:26px 0 64px;border-top:2px solid var(--border-bright);text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--dim);text-transform:uppercase;line-height:2.2}
+footer .last{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:.5px;font-size:21px;color:var(--gold);margin-bottom:12px;line-height:1.4}
+
+/* ---- the reader (a frame around one of her originals) ---- */
+body.reader{height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+body.reader .bar{position:static;flex:0 0 auto}
+.reader-frame{flex:1 1 auto;min-height:0;width:100%;border:0;display:block;background:#060809}
+
+/* ---- motion off: nothing moves, nothing eases ---- */
+:root[data-motion="on"] .door,
+:root[data-motion="on"] .switch,
+:root[data-motion="on"] .bar-link,
+:root[data-motion="on"] .file-inner{transition:background-color .2s,color .2s,border-color .2s}
+
+@media (max-width:520px){
+  .bar{padding:8px 16px;gap:8px 10px}
+  .wrap{padding:0 16px 80px}
+  footer{width:calc(100% - 32px)}
+  .bar-title .ref{display:none}
+}

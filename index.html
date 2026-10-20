@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- prototype: keep out of search engines until the author says otherwise -->
+<meta name="robots" content="noindex, nofollow">
+<title>GLITCH</title>
+<meta name="description" content="GLITCH, a manga / light-novel universe by S. Moore. Prototype, local only.">
+<meta name="author" content="S. Moore">
+<meta name="theme-color" content="#060809">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<script src="assets/js/boot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&family=Barlow:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="module" src="assets/js/settings.js"></script>
+<script type="module" src="assets/js/shelf.js"></script>
+</head>
+<body>
+<a class="skip" href="#files-section">skip to the files</a>
+
+<header class="bar">
+  <span class="bar-home">GLITCH</span>
+  <span class="stamp">prototype · local only</span>
+  <div class="bar-end">
+    <button type="button" class="switch" data-setting="theme" aria-pressed="false">light <span class="state" aria-hidden="true">off</span></button>
+    <button type="button" class="switch" data-setting="motion" aria-pressed="true">motion <span class="state" aria-hidden="true">on</span></button>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <div class="cover">
+    <div class="cover-top">
+      <div class="band">Top Secret // Index</div>
+      <div class="meta">Doc ref: IDX-00<br>Holds: WB-POCKET-01<br>Distribution: friends of the author</div>
+    </div>
+    <h1 class="glitch">GLITCH<span class="ghost a" aria-hidden="true">GLITCH</span><span class="ghost b" aria-hidden="true">GLITCH</span></h1>
+    <p class="byline">a manga / light-novel universe by S. Moore</p>
+    <p class="lede">It is the present day. <em>A war is being fought inside all of it.</em></p>
+    <p class="warn">⚠ &nbsp; All writing is spellcasting.</p>
+    <a class="door" href="pocket-bible/">open the pocket bible <span aria-hidden="true">→</span></a>
+  </div>
+
+  <section id="files-section" style="--c:var(--gold)" aria-labelledby="files-heading">
+    <div class="head"><span class="num">00</span><h2 id="files-heading">The Files</h2></div>
+    <p>One file is open. The rest are empty slots, each marked <em>placeholder</em> until there's something real to put in it.</p>
+    <ol class="files" id="files">
+      <!-- fallback if content/shelf.json can't load; shelf.js replaces this with the full shelf -->
+      <li class="file is-open" style="--c:var(--gold)">
+        <a class="file-inner" href="pocket-bible/">
+          <span class="file-top"><span class="file-num">01</span><span class="file-ref">WB-POCKET-01</span></span>
+          <span class="file-title">the pocket bible</span>
+          <span class="file-note">Twelve sections, from the world to the arc. The author's original file, framed and unedited.</span>
+          <span class="chip">open</span>
+        </a>
+      </li>
+    </ol>
+    <p class="shelf-note" id="files-note" hidden>The rest of the shelf lives in content/shelf.json and needs the local server to load. See the README.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p class="last">GLITCH is the crack. ASCEND is the hum.</p>
+  GLITCH, a manga / light-novel universe by S. Moore<br>
+  Aether Systems LLC<br>
+  prototype · local only · not for distribution
+</footer>
+</body>
+</html>
