@@ -58,7 +58,7 @@ Measured against both the page background and the panel color. Re-check any pair
 | bright | 16.84 / 15.79 | 16.52 / 17.88 | yes |
 | dim | 5.10 / 4.79 | 5.30 / 5.73 | yes |
 | gold | 8.78 / 8.23 | 5.76 / 6.24 | yes |
-| amber | 6.70 / 6.28 | 5.76 / 6.23 | yes (the stamp) |
+| amber | 6.70 / 6.28 | 5.76 / 6.23 | not right now (it was the prototype stamp) |
 | cyan | 6.14 / 5.76 | 5.93 / 6.42 | yes (shelf accent) |
 | violet | 5.16 / 4.84 | 6.21 / 6.72 | yes (shelf accent) |
 | rosegold | 8.93 / 8.37 | 5.63 / 6.10 | yes (shelf accent) |

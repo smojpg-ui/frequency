@@ -2,7 +2,7 @@
 
 A small static site for GLITCH, the manga / light-novel universe by S. Moore. It starts with **the pocket bible**, framed exactly as she made it, plus a landing page with shelf room for whatever comes next.
 
-**Status: prototype.** The code is public on GitHub at [smojpg-ui/frequency](https://github.com/smojpg-ui/frequency). No website has been deployed yet (see *Publish the website* below). Every page still has `noindex` and a visible "prototype · local only" stamp.
+**Status: live.** The site is at **https://smojpg-ui.github.io/frequency/**, and the code is public at [smojpg-ui/frequency](https://github.com/smojpg-ui/frequency).
 
 There's no build step, no dependencies, and nothing to install. It's plain HTML, CSS, and a few small JavaScript files.
 
@@ -89,15 +89,13 @@ Text needs 4.5:1 or more. The table in `ARCHITECTURE.md` lists every current pai
 
 ---
 
-## Publish the website (not done yet)
+## The website
 
-The repo is public on GitHub (`origin`). Turning it into a website is a separate switch. When, and only when, you want the site live:
+**Live at https://smojpg-ui.github.io/frequency/**, served by GitHub Pages from `main`, folder `/ (root)`. Every `git push` to `main` updates it within a minute or two.
 
-1. **What's public already:** everything in the repo. Your full name isn't in it. `originals/` stays on your Mac, and the history was cleaned before the repo went public.
-2. **Lift the prototype bits** when you're ready: delete the `<meta name="robots" content="noindex, nofollow">` line in `index.html` and `pocket-bible/index.html`, and the `stamp` spans + the footer's "prototype · local only" line.
-   - ⚠ The pocket bible's own file has **no** `noindex` line. If it's published, its direct URL (`/editions/glitch-pocket-bible.html`) can be indexed on its own, even while the frame page says noindex. That's fine once you're ready to be found. If you're not, don't publish yet.
-3. **Switch Pages on.** Save your work with `git push`, and then on GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `/ (root)`**.
-4. It lands at `https://smojpg-ui.github.io/frequency/`. Every path in the site is relative, so it works there unchanged.
+- **What's public:** everything in the repo and the site. Your full name isn't in either. `originals/` stays on your Mac, and the history was cleaned before the repo went public.
+- **Search engines can find it.** The `noindex` tags and the "prototype · local only" stamp came off when it went live.
+- **To take the site down** without touching the code: on GitHub, **Settings → Pages → Unpublish site**, or flip the repo back to private.
 
 ---
 

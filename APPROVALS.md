@@ -31,12 +31,14 @@ Every creative call I made for you while building this. None of it is canon, and
 | 10 | **My own microcopy** (UI, not world): "The Files", "Open files link through. A placeholder is an empty slot, held until there's something real to put in it.", "open the pocket bible →", "skip to the files", the switch labels "light" and "motion". *You: "all approved"* | ☑ |
 | 11 | **The wordmark glitches:** every ~7 seconds, a cyan copy and a rose copy of GLITCH split off for a beat and snap back. It's off when motion is off, when your OS asks for reduced motion, and when JavaScript is off. *You: "YEAH"* | ☑ |
 | 12 | **The favicon is your quill**, lifted from the pocket bible's own icon into `assets/icon.svg`. *You: "YEAH"* | ☑ |
-| 13 | **The "prototype · local only" stamp is amber**, outlined, in the top bar, and the footer adds "not for distribution". Both stay until you say otherwise. *You: "all approved"* | ☑ |
+| 13 | **The "prototype · local only" stamp is amber**, outlined, in the top bar, and the footer adds "not for distribution". Both stay until you say otherwise. *You: "all approved"* It came off when the site went live (20). | ☑ |
 | 14 | **The byline is a nod, not your full name:** *by S. Moore* and *Aether Systems Research*, no LLC. That covers the landing page, the reader bar, and the page metadata. *You: "not my full name. just a nod. Aether Research Systems. no LLC needed."* Your untouched original still has your full name in it, so the nod inside the frame comes from the edited copy (18). | ☑ |
 | 15 | **Fonts are saved in the repo** (`assets/fonts/`, with their open-font licenses), so the site makes no outside requests and works offline. *You: "oh shit that's cool. we can save copies in the repo? CLAUDE YEAH VENTURE FORTH, DEAR ONE \*points\*"* Done. The one exception is your original inside the frame, which still loads its own fonts from Google. That's in your file, and I don't edit it. | ☑ |
 | 16 | **The local preview runs on port 4747**, a small nod to Subject 47. *You: "THE NOD. \*agrees\*"* | ☑ |
 | 17 | **New, from "get wild" (8): light mode re-stamps the band.** Dark reads `Top Secret // Index`. Light, the printout, reads `Declassified // Printout`, because the paper copy is the declassified one. *You: "all approved"* | ☑ |
 | 18 | **An edited copy of the pocket bible carries the nod**: `editions/glitch-pocket-bible.html`, with 5 lines changed (author tag, two descriptions, footer byline, footer "Aether Systems Research"). The reader shows this copy. `originals/` keeps your untouched file. *You: "edit it, please!!!! then let me save the cutie"* | ☑ |
+| 19 | **Public repo, originals stay local.** `originals/` is gitignored, and your full name was scrubbed from the git history before the flip. *You: "PUBLIC BABY. PUSH GLITCH WEEEEE"*, then "Clean history, then public". | ☑ |
+| 20 | **The website is live** at https://smojpg-ui.github.io/frequency/ (GitHub Pages, `main`, root). The noindex tags and the prototype stamp came off. *You: "(want it)"*, then "Both". | ☑ |
 
 ## Notes on your original (I changed nothing; these are offers)
 
@@ -53,6 +55,6 @@ Things I noticed while reading it closely. Take them or leave them. Any you say 
 
 ## Things I didn't do
 
-- No website deployed yet. The repo went to GitHub when you asked for the link (*"SEND THE GIT LINK, BABE"*). It started private, then you said *"PUBLIC BABY. PUSH GLITCH WEEEEE"*. Before it went public, `originals/` was made local-only and your full name was scrubbed from the git history, keeping the nod you asked for. https://github.com/smojpg-ui/frequency
+- The repo went to GitHub when you asked for the link (*"SEND THE GIT LINK, BABE"*). It started private, then you said *"PUBLIC BABY. PUSH GLITCH WEEEEE"*. Before it went public, `originals/` was made local-only and your full name was scrubbed from the git history, keeping the nod you asked for. https://github.com/smojpg-ui/frequency
 - No loose art was committed. Images are gitignored until you say yes to a piece.
 - Nothing from any other world you're building was used. The palette, type, and voice all come from the pocket bible and GLITCH.
