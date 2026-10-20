@@ -47,8 +47,8 @@ In the Claude desktop app, `.claude/launch.json` holds the same command under th
 **Add or edit a file on the shelf:** open `content/shelf.json`. Each entry looks like this:
 
 ```json
-{ "id": "world-bible", "ref": "WB-v0.7", "title": "the world bible",
-  "status": "placeholder", "accent": "violet",
+{ "id": "gallery", "ref": "ART-00", "title": "the gallery",
+  "status": "placeholder", "accent": "rosegold",
   "note": "Placeholder. ..." }
 ```
 
@@ -56,12 +56,12 @@ In the Claude desktop app, `.claude/launch.json` holds the same command under th
 - `accent`: `gold`, `violet`, `cyan`, `rosegold`, or `amber`. These five pass contrast in both themes. Anything else falls back to gold.
 - Order in the file = order on the page. Numbers (01, 02…) are added automatically.
 
-**Add a new original (say, the world bible):**
+**Add a new original (say, a chapter you've finished):**
 
-1. Copy it into `originals/` untouched, e.g. `cp ~/somewhere/world-bible.html originals/`.
+1. Copy it into `originals/` untouched, e.g. `cp ~/somewhere/ch-001.html originals/`.
 2. Refresh the fingerprints: `shasum -a 256 originals/*.html > SHA256SUMS`
-3. Make its reader: copy the `pocket-bible/` folder to `world-bible/`, then in `world-bible/index.html` change the `<title>`, the bar title, and the two `../originals/...` paths.
-4. In `content/shelf.json`, set that entry to `"status": "open"` and `"href": "world-bible/"`.
+3. Make its reader: copy the `pocket-bible/` folder to `ch-001/`, then in `ch-001/index.html` change the `<title>`, the bar title, and the two `../originals/...` paths.
+4. In `content/shelf.json`, set that entry to `"status": "open"` and `"href": "ch-001/"`.
 
 **Check the originals are still untouched:**
 
@@ -79,7 +79,10 @@ python3 tools/contrast.py "#c9a84c" "#060809"
 
 Text needs 4.5:1 or more. The table in `ARCHITECTURE.md` lists every current pair.
 
-**Art:** images (`*.png`, `*.jpg`, `*.psd`, etc.) and any `art/` folder are **gitignored**, so loose art never gets committed by accident. Once the artist says yes to a piece: `git add -f path/to/piece.png`.
+**Art:** two folders, two rules.
+
+- **`art/`** is the drop box. Put drafts, sketches, and works in progress here. The folder is gitignored, so nothing in it can be committed by accident. Image files (`*.png`, `*.jpg`, `*.psd`, etc.) anywhere else in the repo are ignored too.
+- **`assets/art/`** is for approved pieces only. When the artist says yes to a piece, it moves here and gets committed. That move is the yes.
 
 ---
 

@@ -1,5 +1,6 @@
 # loose art stays out of git until the artist says yes.
-# after a yes:  git add -f path/to/the-piece.png   (or add a "!path" line below)
+#   art/          = her drop box for drafts and works in progress (never committed)
+#   assets/art/   = approved pieces only; a piece moves here on her yes, and is committed
 *.png
 *.jpg
 *.jpeg
@@ -15,7 +16,9 @@
 *.kra
 *.mp4
 *.mov
-art/
+/art/
+!assets/art/
+!assets/art/**
 
 # machine + editor noise
 .DS_Store

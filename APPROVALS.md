@@ -11,8 +11,8 @@ Every creative call I made for you while building this. None of it is canon, and
 | 1 | **The repo's folder name:** `frequency`. You picked it ("FREQUENCY IS FUN-ER"). If this ever goes to GitHub Pages, it becomes the URL: `…github.io/frequency/`. | ☑ |
 | 2 | **Your file is stored as `originals/glitch-pocket-bible.html`.** I dropped the `_1` from the filename because it was macOS's duplicate-download suffix (both copies in Downloads are byte-identical, sha256 `908da313…bfef997`). The contents are unchanged. | ☐ |
 | 3 | **The pocket bible is shown in a frame** (a slim bar on top, your file filling the rest of the screen), not rebuilt as a site page. "original ↗" opens it alone in its own tab. | ☐ |
-| 4 | **"The Files" shelf has 4 slots.** One is open (the pocket bible). Three are **placeholders**: *the world bible* (v0.7) and *the theoretical annexes* (v0.3), both named in your pocket bible's footer, plus *the gallery*. I put nothing in them. Want different slots, fewer, or none until they're real? | ☐ |
-| 5 | **Doc refs for the slots:** `WB-v0.7`, `ANNEX-v0.3`, `ART-00`, and `IDX-00` for the landing page. `WB-POCKET-01` is yours, and the rest are mine, made in its style. They're site labels, not canon. | ☐ |
+| 4 | **"The Files" shelf:** one open file (the pocket bible) and one **placeholder**, *the gallery*. The world bible v0.7 and annexes v0.3 slots came out after you said *"the pocket bible is the most up to date. it mixes annex and world bible...i THINK."* (Its own cover confirms it: "Drawn from: World Bible v0.7 + Annexes v0.3.") | ☑ |
+| 5 | **Doc refs:** `ART-00` for the gallery and `IDX-00` for the landing page. `WB-POCKET-01` is yours, and the rest are mine, made in its style. They're site labels, not canon. | ☐ |
 
 ## Look and voice
 
@@ -22,7 +22,7 @@ Every creative call I made for you while building this. None of it is canon, and
 | 7 | **Light mode is "the printout":** your hues darkened onto warm paper (`#f3f0e8`) until every text color passes AA. It only changes my pages. Your dossier stays dark inside its frame. | ☐ |
 | 8 | **The landing page speaks in the pocket bible's dossier voice:** a red band reading `Top Secret // Index`, a doc ref, `Holds: WB-POCKET-01`, and `Distribution: friends of the author` (your phrase, reused). | ☐ |
 | 9 | **The landing copy is all your own lines**, trimmed: the byline *"a manga / light-novel universe by S. Moore"*, *"It is the present day. A war is being fought inside all of it."*, *"All writing is spellcasting."*, and *"GLITCH is the crack. ASCEND is the hum."* in the footer. I wrote no new world text. | ☐ |
-| 10 | **My own microcopy** (UI, not world): "The Files", "One file is open. The rest are empty slots, each marked placeholder until there's something real to put in it.", "open the pocket bible →", "skip to the files", the switch labels "light" and "motion". | ☐ |
+| 10 | **My own microcopy** (UI, not world): "The Files", "Open files link through. A placeholder is an empty slot, held until there's something real to put in it.", "open the pocket bible →", "skip to the files", the switch labels "light" and "motion". | ☐ |
 | 11 | **The wordmark glitches:** every ~7 seconds, a cyan copy and a rose copy of GLITCH split off for a beat and snap back. It's off when motion is off, when your OS asks for reduced motion, and when JavaScript is off. | ☐ |
 | 12 | **The favicon is your quill**, lifted from the pocket bible's own icon into `assets/icon.svg`. | ☐ |
 | 13 | **The "prototype · local only" stamp is amber**, outlined, in the top bar, and the footer adds "not for distribution". Both stay until you say otherwise. | ☐ |

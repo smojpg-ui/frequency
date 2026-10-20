@@ -15,6 +15,7 @@ frequency/
 │   ├── js/settings.js         module: the light / motion switches
 │   ├── js/shelf.js            module: renders shelf.json into The Files
 │   └── icon.svg               the quill favicon, decoded from the pocket bible's own
+├── art/                       her drop box for drafts (gitignored; approved pieces move to assets/art/)
 ├── tools/contrast.py          WCAG contrast for two colors (standard-library Python)
 ├── .claude/launch.json        `python3 -m http.server 4747` for the desktop app's preview
 ├── .nojekyll                  GitHub Pages: serve as-is

@@ -11,28 +11,12 @@
       "note": "Twelve sections, from the world to the arc. The author's original file, framed and unedited."
     },
     {
-      "id": "world-bible",
-      "ref": "WB-v0.7",
-      "title": "the world bible",
-      "status": "placeholder",
-      "accent": "violet",
-      "note": "Placeholder. The pocket bible is drawn from World Bible v0.7, which isn't filed here yet."
-    },
-    {
-      "id": "annexes",
-      "ref": "ANNEX-v0.3",
-      "title": "the theoretical annexes",
-      "status": "placeholder",
-      "accent": "cyan",
-      "note": "Placeholder. Theoretical Annexes v0.3 is named in the pocket bible's footer and isn't filed here yet."
-    },
-    {
       "id": "gallery",
       "ref": "ART-00",
       "title": "the gallery",
       "status": "placeholder",
       "accent": "rosegold",
-      "note": "Placeholder. Nothing hangs here until the artist says yes."
+      "note": "Placeholder. The art is being inked. Nothing hangs here until the artist says yes."
     }
   ]
 }
